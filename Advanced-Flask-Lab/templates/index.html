@@ -22,11 +22,11 @@
             <!--  -->
             <br> <br>
 						<ul class="icons">
-							<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
-							<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+							<li><a href="https://twitter.com" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://facebook.com" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.instagram.com/" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
+							<li><a href="https://mail.google.com/" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
 						</ul>
 					</header>
 
@@ -63,12 +63,18 @@
 							<section class="thumbnails">
                 
 								{% for post in posts %}
-                <div>
-        					<a href='{{post}}'>
-                <img src="{{post}}"/>
-                <h3>{{posts[post]}}</h3>
-                </a>
-                </div>
+              	  <div>
+        						<a href='{{post}}'>
+	    	        	    <img src="{{post}}"/>
+  	    	    	      <h3>{{post}}</h3>
+    	      	      </a>
+          	      </div>
+                {% if post in pol %}
+	  							</section>
+									<section class="thumbnails">
+								{% endif %}
+
+                
                 {% endfor %}
               </section>
 					</section>
